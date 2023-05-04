@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 
 //signup
 const signUp = async (req, res, next) => {
-  const { email, password, firstName, lastName, userName, organization, role } =
+  const { email, password, firstName, lastName, userName,  role } =
     req.body;
 
   let user;
@@ -16,7 +16,6 @@ const signUp = async (req, res, next) => {
       firstName,
       lastName,
       userName,
-      organization,
       role,
     });
     const salt = await bcrypt.genSalt(10);
@@ -38,7 +37,7 @@ const signUp = async (req, res, next) => {
         name: firstName,
         id: user.id,
         role: user.role,
-        organization: user.organization,
+        //organization: user.organization,
         user: user,
       });
     });
@@ -79,7 +78,7 @@ const login = async (req, res, next) => {
         lastName: user.lastName,
         id: user.id,
         role: user.role,
-        organization: user.organization,
+        //organization: user.organization,
         user: user,
       });
     });
