@@ -57,7 +57,7 @@ const RegisterForm = () => {
           newUser.data.firstName + " " + newUser.data.lastName,
           newUser.data.id,
           newUser.data.role,
-          newUser.data.organization,
+          //newUser.data.organization,
           newUser.data.user
         );
       }

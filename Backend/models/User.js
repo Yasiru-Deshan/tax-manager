@@ -28,7 +28,7 @@ const UserSchema = mongoose.Schema({
   role: {
     type: String,
   },
-  organization:{
+  organization: {
     type: String,
   },
   employees: [

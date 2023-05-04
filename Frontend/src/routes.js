@@ -10,7 +10,7 @@ const getRoutes = (token)=>{
 
     routes = (
       <Routes>
-        <Route path="/" element={token ? <Home/> : <LoginPage />} exact />
+        <Route path="/" element={token ? <Home /> : <LoginPage />} exact />
         <Route
           path="/home"
           element={token ? <Home /> : <Navigate to="/" />}
@@ -21,9 +21,9 @@ const getRoutes = (token)=>{
           element={token ? <Home /> : <SignUpPage />}
           exact
         />
-        
+
         <Route path="/" element={<LoginPage />} exact />
-        <Route path='/tax' element={<Calculator/>} exact/>
+        <Route path="/tax" element={token ? <Calculator /> : <LoginPage/>} exact />
       </Routes>
     );
 

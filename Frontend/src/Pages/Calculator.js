@@ -65,7 +65,7 @@ function Calculator() {
   };
 
   return (
-    <div className="calculator" style={{ marginTop: "50px" }}>
+    <div className="calculator" style={{ marginTop: "50px", width:'500px' }}>
       <h2>Tax Calculator</h2>
       <label>
         Income:
@@ -78,7 +78,7 @@ function Calculator() {
       <br />
       <label>
         Deduction:
-        <input type="number" value={deduction}  />
+        <input type="number" value={deduction} />
       </label>
       <br />
       <label>
@@ -92,6 +92,9 @@ function Calculator() {
         Tax:
         <input type="number" value={tax} readOnly />
       </label>
+      <button type="button" className="btn btn-primary" style={{width:'100%'}}>
+        PAY NOW
+      </button>
     </div>
   );
 }

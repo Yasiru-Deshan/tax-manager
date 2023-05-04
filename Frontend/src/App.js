@@ -6,7 +6,6 @@ import { NotificationContext } from "./Context/NotificationContext";
 import Notification from "./Components/Notification";
 import getRoutes from "./routes";
 import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
 
 function App() { 
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +17,6 @@ function App() {
   const [role, setRole] = useState();
   const [userId, setUserId] = useState();
   const [user, setUser] = useState();
-  const [organization, setOrganization] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [notify, setNotify] = useState();
   const [message, setMessage] = useState();
@@ -49,7 +47,7 @@ function App() {
         name: storedData.name,
         id: storedData.id,
         role: storedData.role,
-        organization: storedData.organization,
+     
         user,
       })
     );
@@ -60,7 +58,7 @@ function App() {
     setToken(token);
     setName(name);
     setUserId(id);
-    setOrganization(organization);
+
     setUser(user);
     setRole(role);
     localStorage.setItem(
@@ -70,7 +68,7 @@ function App() {
         name,
         id,
         role,
-        organization,
+     
         user,
       })
     );
@@ -82,7 +80,7 @@ function App() {
     setName(null);
     setUserId(null);
     setUser(null);
-    setOrganization(null);
+
     setRole(null);
     localStorage.removeItem("authData");
     localStorage.clear();
@@ -114,7 +112,6 @@ function App() {
         fullName: name,
         userId: userId,
         role: role,
-        organization: organization,
         user,
         authenticate,
         logout: logout,
